@@ -1,10 +1,11 @@
-
+import Header from "./components/Header";
+import ClientHome from "./routes/ClientHome";
 
 export default function App() {
 
   return (
     <>
-      <h1>Bravo Run Club</h1>
+      <ClientHome />
     </>
   )
 }

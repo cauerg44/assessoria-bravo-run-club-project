@@ -1,0 +1,46 @@
+.brc-motivational-card-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.brc-motivational-card-modal h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: var(--brc-font-color-secondary);
+}
+
+.brc-motivational-card-modal h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--brc-font-color-tertiary);
+}
+
+@media (max-width: 576px) {
+  .brc-motivational-card-modal {
+    width: 90%;
+  }
+
+  .brc-motivational-card-modal h2 {
+    font-size: 28px;
+  }
+
+  .brc-motivational-card-modal h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .brc-motivational-card-modal {
+    width: 90%;
+  }
+
+  .brc-motivational-card-modal h2 {
+    font-size: 28px;
+  }
+
+  .brc-motivational-card-modal h4 {
+    font-size: 20px;
+  }
+}
