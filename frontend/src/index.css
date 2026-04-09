@@ -7,8 +7,11 @@
   --brc-font-color-primary: #fff;
   --brc-font-color-secondary: #013e74;
   --brc-font-color-tertiary: #5f5f5f;
+  --brc-font-color-quaternary: #0caf1d;
+  --brc-font-color-quintanary: #0057a3;
 
   --brc-border-color-primary: #013e74;
+  --brc-border-color-secondary: #0057a3;
 }
 
 * {
@@ -42,14 +45,23 @@ main {
 /* button styles */
 
 .brc-btn-primary {
-  align-self: center;
   background-color: var(--brc-bg-color-primary);
-  color: var(--brc-bg-color-secondary);
+  color: var(--brc-font-color-primary);
   border: none;
   border-radius: 8px;
   width: 170px;
   height: 45px;
   font-weight: 600;
+}
+
+.brc-btn-secondary {
+  color: var(--brc-font-color-secondary);
+  background-color: var(--brc-bg-color-secondary);
+  border: 2px solid var(--brc-border-color-primary);
+  border-radius: 8px;
+  width: 170px;
+  height: 45px;
+  font-weight: 700;
 }
 
 /* border styles */
