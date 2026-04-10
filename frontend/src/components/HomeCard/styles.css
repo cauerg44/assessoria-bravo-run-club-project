@@ -31,16 +31,8 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1065px) {
   .brc-motivational-card-modal {
     width: 90%;
-  }
-
-  .brc-motivational-card-modal h2 {
-    font-size: 28px;
-  }
-
-  .brc-motivational-card-modal h4 {
-    font-size: 20px;
   }
 }

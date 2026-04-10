@@ -16,6 +16,7 @@ export default function ClientHome() {
           <CardPlansModal />
         </section>
       </main>
+
     </>
   );
 }

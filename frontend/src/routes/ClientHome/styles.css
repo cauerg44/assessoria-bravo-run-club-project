@@ -1,7 +1,12 @@
 #brc-motivational-section {
-  padding: 10px 0;
+  padding-bottom: 10px;
 }
 
 #brc-home-plans-section {
-  padding: 10px 0;
+  padding-bottom: 20px;
+}
+
+#brc-home-creators-section {
+  padding: 10px;
+  background-color: var(--brc-bg-color-primary);
 }
