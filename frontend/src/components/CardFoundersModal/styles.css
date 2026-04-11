@@ -63,9 +63,9 @@
   height: 30px;
 }
 
-.brc-founder-card-details-social-media h5 {
+.brc-founder-card-details-social-media a {
   color: var(--brc-font-color-primary);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

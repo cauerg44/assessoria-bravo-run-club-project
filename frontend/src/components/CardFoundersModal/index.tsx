@@ -18,7 +18,7 @@ export default function CardFoundersModal() {
           </div>
           <div className='brc-founder-card-details-social-media'>
             <img src={instagramIcon} alt="Instagram" />
-            <h5>@jenifferispinosa</h5>
+            <a href="https://www.instagram.com/jenifferispinosa/">@jenifferispinosa</a><h5></h5>
           </div>
         </div>
         <div className='brc-founder-card'>
@@ -30,7 +30,7 @@ export default function CardFoundersModal() {
           </div>
           <div className='brc-founder-card-details-social-media'>
             <img src={instagramIcon} alt="Instagram" />
-            <h5>@thigasbs</h5>
+            <a href="https://www.instagram.com/thigasbs/">@thigasbs</a>
           </div>
         </div>
         <div className='brc-founder-card'>
@@ -42,7 +42,7 @@ export default function CardFoundersModal() {
           </div>
           <div className='brc-founder-card-details-social-media'>
             <img src={instagramIcon} alt="Instagram" />
-            <h5>@vitorsoares.personal</h5>
+            <a href="https://www.instagram.com/vitorsoares.personal/">@vitorsoares.personal</a>
           </div>
         </div>
       </div>

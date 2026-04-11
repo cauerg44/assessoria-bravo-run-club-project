@@ -52,6 +52,7 @@ main {
   width: 170px;
   height: 45px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .brc-btn-secondary {

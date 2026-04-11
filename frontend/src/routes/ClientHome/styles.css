@@ -1,12 +1,53 @@
 #brc-motivational-section {
-  padding-bottom: 10px;
+  padding: 20px 0;
 }
 
 #brc-home-plans-section {
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
-#brc-home-creators-section {
-  padding: 10px;
+#brc-home-founders-section {
+  padding: 20px 0;
+}
+
+.brc-footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--brc-font-color-secondary);
+  height: 20vh;
+}
+
+.brc-footer-container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brc-footer-container-content p {
+  color: var(--brc-font-color-primary);
+}
+
+.brc-footer-social-media {
+  display: flex;
+  align-items: center;
   background-color: var(--brc-bg-color-primary);
+  padding: 15px 0px;
+}
+
+.brc-footer-social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+.brc-footer-social-media a {
+  color: var(--brc-font-color-primary);
+}
+
+@media(max-width: 575px) {
+  .brc-footer-container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
