@@ -13,8 +13,7 @@ export default function CardFoundersModal() {
           <img src={jenifferImg} alt="Founder profile photo" />
           <div className='brc-founder-card-details'>
             <h3>Jennifer Ispinosa</h3>
-            <h4>Sócia</h4>
-            <p>Descrição</p>
+            <h4>Sócia da BRAVO</h4>
             <p>Fundadora da bravo e responsável pelo marketing da assessoria</p>
           </div>
           <div className='brc-founder-card-details-social-media'>
@@ -26,7 +25,7 @@ export default function CardFoundersModal() {
           <img src={thiagoImg} alt="Founder profile photo" />
           <div className='brc-founder-card-details'>
             <h3>Thiaguinho</h3>
-            <h4>Sócio</h4>
+            <h4>Sócio da BRAVO</h4>
             <p>Fundador da bravo e responsável pelo financeiro da assessoria</p>
           </div>
           <div className='brc-founder-card-details-social-media'>
@@ -38,7 +37,7 @@ export default function CardFoundersModal() {
           <img src={vitorImg} alt="Founder profile photo" />
           <div className='brc-founder-card-details'>
             <h3>Vitor Soares</h3>
-            <h4>Coach da BRAVO</h4>
+            <h4>Sócio e coach da BRAVO</h4>
             <p>Sócio e responsável por toda parte técnica da assessoria</p>
           </div>
           <div className='brc-founder-card-details-social-media'>
