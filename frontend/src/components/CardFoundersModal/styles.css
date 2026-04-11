@@ -1,0 +1,75 @@
+.brc-founders-modal-container h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--brc-font-color-secondary);
+}
+
+.brc-founders-modal {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+.brc-founder-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* estilo da IA */
+.brc-founder-card img {
+  width: 100%;
+  height: 350px;
+  /* Ou a altura que preferir */
+  object-fit: cover;
+  /* Garante que a foto não distorça ao fixar a altura */
+}
+
+.brc-founder-card h3 {
+  color: var(--brc-font-color-secondary);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.brc-founder-card p {
+  margin-top: 10px;
+  color: var(--brc-font-color-tertiary);
+  font-size: 15px;
+}
+
+.brc-founder-card-details {
+  padding: 10px;
+  border-right: 1px solid var(--brc-border-color-primary);
+  border-left: 1px solid var(--brc-border-color-primary);
+
+  /* estilo da IA */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.brc-founder-card-details-social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brc-bg-color-primary);
+  padding: 15px 0px;
+}
+
+.brc-founder-card-details-social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+.brc-founder-card-details-social-media h5 {
+  color: var(--brc-font-color-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .brc-founders-modal {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

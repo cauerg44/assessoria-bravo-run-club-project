@@ -1,3 +1,4 @@
+import CardFoundersModal from "../../components/CardFoundersModal";
 import CardPlansModal from "../../components/CardPlansModal";
 import Header from "../../components/Header";
 import HomeCard from "../../components/HomeCard";
@@ -15,8 +16,10 @@ export default function ClientHome() {
         <section id="brc-home-plans-section">
           <CardPlansModal />
         </section>
+        <section id="brc-home-founders-section">
+          <CardFoundersModal />
+        </section>
       </main>
-
     </>
   );
 }
