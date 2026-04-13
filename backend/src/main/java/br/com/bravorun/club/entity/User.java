@@ -24,6 +24,14 @@ public class User {
     public User() {
     }
 
+    public User(Long id, String name, String email, String password, Athlete athlete) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.athlete = athlete;
+    }
+
     public Long getId() {
         return id;
     }
@@ -50,6 +58,10 @@ public class User {
 
     public String getPassword() {
         return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
