@@ -1,10 +1,10 @@
 import './styles.css';
 import ButtonPrimary from "../ButtonPrimary";
 
-export default function CardPlansModal() {
+export default function PlansCardsHomeModal() {
   return (
     <>
-      <div className='brc-modal-container line-bottom-blue temp-container'>
+      <div className='brc-modal-container line-bottom-blue brc-container-1100'>
         <h2>Conheça nossos planos</h2>
         <div className='brc-modal-container-cards'>
           <div className="brc-plan-card">

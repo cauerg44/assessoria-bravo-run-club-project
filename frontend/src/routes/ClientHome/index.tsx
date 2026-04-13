@@ -1,24 +1,23 @@
-import CardFoundersModal from "../../components/CardFoundersModal";
-import CardPlansModal from "../../components/CardPlansModal";
-import Header from "../../components/Header";
-import HomeCard from "../../components/HomeCard";
 import './styles.css';
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-
+import MotivationalCardHomeModal from "../../components/MotivationalCardHomeModal";
+import PlansCardsHomeModal from "../../components/PlansCardsHomeModal";
+import FoundersCardsModalHome from "../../components/FoundersCardsModalHome";
 
 export default function ClientHome() {
   return (
     <>
       <Header />
       <main>
-        <section id="brc-motivational-section">
-          <HomeCard />
+        <section id="brc-home-motivational-section">
+          <MotivationalCardHomeModal />
         </section>
         <section id="brc-home-plans-section">
-          <CardPlansModal />
+          <PlansCardsHomeModal />
         </section>
         <section id="brc-home-founders-section">
-          <CardFoundersModal />
+          <FoundersCardsModalHome />
         </section>
       </main>
       <Footer />

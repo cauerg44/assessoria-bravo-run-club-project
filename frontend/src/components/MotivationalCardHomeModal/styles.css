@@ -1,8 +1,6 @@
 .brc-motivational-card-modal {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 50%;
 }
 
 .brc-motivational-card-modal h2 {

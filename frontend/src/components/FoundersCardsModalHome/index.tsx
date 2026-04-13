@@ -4,9 +4,9 @@ import thiagoImg from '../../assets/thiago.png';
 import vitorImg from '../../assets/vitor.jpeg';
 import instagramIcon from '../../assets/instagram-icon.svg';
 
-export default function CardFoundersModal() {
+export default function FoundersCardsModalHome() {
   return (
-    <div className='brc-founders-modal-container temp-container'>
+    <div className='brc-founders-modal-container brc-container-1100'>
       <h2>Sócios da Bravo Run Club</h2>
       <div className='brc-founders-modal'>
         <div className='brc-founder-card'>
