@@ -1,0 +1,55 @@
+.brc-modal-container {
+  padding-bottom: 20px;
+}
+
+.brc-modal-container h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--brc-font-color-secondary);
+}
+
+.brc-modal-container-cards {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.brc-plan-card {
+  border: 2px solid var(--brc-border-color-secondary);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 10px 10px 0px 10px;
+}
+
+.brc-plan-card h4 {
+  font-size: 18px;
+  color: var(--brc-font-color-secondary);
+  margin-bottom: 15px;
+}
+
+.brc-plan-card p {
+  font-size: 14px;
+  color: var(--brc-font-color-tertiary);
+  margin-bottom: 10px;
+}
+
+.brc-plan-card h5 {
+  font-size: 28px;
+  color: var(--brc-font-color-secondary);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.brc-plan-card button {
+  align-self: center;
+  width: 100%;
+}
+
+@media (max-width: 930px) {
+  .brc-modal-container-cards {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
