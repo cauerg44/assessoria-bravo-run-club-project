@@ -4,6 +4,8 @@ import br.com.bravorun.club.entity.enums.AthleteStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -24,6 +26,9 @@ public class Athlete {
 
     @Column(columnDefinition = "TEXT", nullable = true)
     private String medicalObservations;
+
+    @OneToMany(mappedBy = "athlete")
+    private List<WeeklyTraining> workouts = new ArrayList<>();
 
     @OneToOne
     @MapsId
@@ -80,6 +85,18 @@ public class Athlete {
 
     public void setMedicalObservations(String medicalObservations) {
         this.medicalObservations = medicalObservations;
+    }
+
+    public List<WeeklyTraining> getWorkouts() {
+        return workouts;
+    }
+
+    public void addWorkout(WeeklyTraining workout) {
+        this.workouts.add(workout);
+    }
+
+    public void removeWorkout(WeeklyTraining workout) {
+        this.workouts.remove(workout);
     }
 
     public User getUser() {
