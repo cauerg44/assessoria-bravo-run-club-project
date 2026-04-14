@@ -21,8 +21,11 @@ public class WeeklyTraining {
     private LocalDate endDate;
     private String goal;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String description;
+
+    @Column(nullable = false)
+    private Boolean completed = false;
 
     public WeeklyTraining() {
     }
@@ -82,6 +85,14 @@ public class WeeklyTraining {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
     @Override

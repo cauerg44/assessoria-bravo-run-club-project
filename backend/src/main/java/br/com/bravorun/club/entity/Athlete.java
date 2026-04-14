@@ -30,6 +30,9 @@ public class Athlete {
     @OneToMany(mappedBy = "athlete")
     private List<WeeklyTraining> workouts = new ArrayList<>();
 
+    @OneToMany(mappedBy = "athlete")
+    private List<Payment> payments = new ArrayList<>();
+
     @OneToOne
     @MapsId
     @JoinColumn(name = "user_id")
@@ -97,6 +100,15 @@ public class Athlete {
 
     public void removeWorkout(WeeklyTraining workout) {
         this.workouts.remove(workout);
+    }
+
+    public List<Payment> getPayments() {
+        return payments;
+    }
+
+    public void addPayment(Payment payment) {
+        this.payments.add(payment);
+        payment.setAthlete(this);
     }
 
     public User getUser() {
