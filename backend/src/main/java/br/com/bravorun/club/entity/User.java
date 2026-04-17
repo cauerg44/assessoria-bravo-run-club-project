@@ -1,7 +1,9 @@
 package br.com.bravorun.club.entity;
 
+import br.com.bravorun.club.entity.enums.Gender;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
@@ -18,17 +20,25 @@ public class User {
 
     private String password;
 
+    @Column(nullable = false)
+    private LocalDate birthDate;
+
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Athlete athlete;
 
     public User() {
     }
 
-    public User(Long id, String name, String email, String password, Athlete athlete) {
+    public User(Long id, String name, String email, String password, LocalDate birthDate, Gender gender, Athlete athlete) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.birthDate = birthDate;
+        this.gender = gender;
         this.athlete = athlete;
     }
 
@@ -62,6 +72,22 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     public Athlete getAthlete() {

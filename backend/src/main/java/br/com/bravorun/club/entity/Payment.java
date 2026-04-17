@@ -17,7 +17,7 @@ public class Payment {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "athlete_id")
+    @JoinColumn(name = "athlete_id", nullable = false)
     private Athlete athlete;
 
     private BigDecimal amount;
@@ -25,22 +25,22 @@ public class Payment {
     private LocalDate paymentDate;
 
     @Enumerated(EnumType.STRING)
-    private PaymentStatus status;
+    private PaymentStatus paymentStatus;
 
     @Enumerated(EnumType.STRING)
-    private PaymentMethod method;
+    private PaymentMethod paymentMethod;
 
     public Payment() {
     }
 
-    public Payment(Long id, Athlete athlete, BigDecimal amount, LocalDate dueDate, LocalDate paymentDate, PaymentStatus status, PaymentMethod method) {
+    public Payment(Long id, Athlete athlete, BigDecimal amount, LocalDate dueDate, LocalDate paymentDate, PaymentStatus paymentStatus, PaymentMethod paymentMethod) {
         this.id = id;
         this.athlete = athlete;
         this.amount = amount;
         this.dueDate = dueDate;
         this.paymentDate = paymentDate;
-        this.status = status;
-        this.method = method;
+        this.paymentStatus = paymentStatus;
+        this.paymentMethod = paymentMethod;
     }
 
     public Long getId() {
@@ -84,19 +84,19 @@ public class Payment {
     }
 
     public PaymentStatus getStatus() {
-        return status;
+        return paymentStatus;
     }
 
     public void setStatus(PaymentStatus status) {
-        this.status = status;
+        this.paymentStatus = status;
     }
 
     public PaymentMethod getMethod() {
-        return method;
+        return paymentMethod;
     }
 
     public void setMethod(PaymentMethod method) {
-        this.method = method;
+        this.paymentMethod = method;
     }
 
     @Override

@@ -18,11 +18,8 @@ public class Athlete {
     @Column(unique = true)
     private String phone;
 
-    @Column(nullable = false)
-    private LocalDate birthDate;
-
     @Enumerated(EnumType.STRING)
-    private AthleteStatus status;
+    private AthleteStatus athleteStatus;
 
     @Column(columnDefinition = "TEXT", nullable = true)
     private String medicalObservations;
@@ -41,11 +38,10 @@ public class Athlete {
     public Athlete() {
     }
 
-    public Athlete(Long id, String phone, LocalDate birthDate, AthleteStatus status, String medicalObservations, User user) {
+    public Athlete(Long id, String phone, AthleteStatus athleteStatus, String medicalObservations, User user) {
         this.id = id;
         this.phone = phone;
-        this.birthDate = birthDate;
-        this.status = status;
+        this.athleteStatus = athleteStatus;
         this.medicalObservations = medicalObservations;
         this.user = user;
     }
@@ -66,20 +62,12 @@ public class Athlete {
         this.phone = phone;
     }
 
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
     public AthleteStatus getStatus() {
-        return status;
+        return athleteStatus;
     }
 
     public void setStatus(AthleteStatus status) {
-        this.status = status;
+        this.athleteStatus = status;
     }
 
     public String getMedicalObservations() {
@@ -96,10 +84,12 @@ public class Athlete {
 
     public void addWorkout(WeeklyTraining workout) {
         this.workouts.add(workout);
+        workout.setAthlete(this);
     }
 
     public void removeWorkout(WeeklyTraining workout) {
         this.workouts.remove(workout);
+        workout.setAthlete(this);
     }
 
     public List<Payment> getPayments() {
@@ -108,6 +98,11 @@ public class Athlete {
 
     public void addPayment(Payment payment) {
         this.payments.add(payment);
+        payment.setAthlete(this);
+    }
+
+    public void removePayment(Payment payment) {
+        this.payments.remove(payment);
         payment.setAthlete(this);
     }
 
