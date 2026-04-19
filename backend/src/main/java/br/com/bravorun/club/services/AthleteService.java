@@ -1,9 +1,11 @@
 package br.com.bravorun.club.services;
 
 import br.com.bravorun.club.dto.response.AthleteMinResponseDTO;
+import br.com.bravorun.club.dto.response.AthleteResponseDTO;
 import br.com.bravorun.club.entity.Athlete;
 import br.com.bravorun.club.entity.enums.AthleteStatus;
 import br.com.bravorun.club.repository.AthleteRepository;
+import br.com.bravorun.club.services.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,5 +34,20 @@ public class AthleteService {
                 athlete.getUser().getBirthDate(),
                 athlete.getGoal()
         )).collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public AthleteResponseDTO findById(Long id) {
+        Athlete athlete = repository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Recurso não encontrado"));
+
+        return new AthleteResponseDTO(
+                athlete.getId(),
+                athlete.getUser().getName(),
+                athlete.getUser().getBirthDate(),
+                athlete.getGoal(),
+                athlete.getPhone(),
+                athlete.getMedicalObservations()
+        );
     }
 }
