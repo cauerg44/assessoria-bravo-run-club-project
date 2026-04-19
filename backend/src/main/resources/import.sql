@@ -14,13 +14,15 @@ INSERT INTO tb_user (name, email, password, gender, birth_date) VALUES ('Fernand
 -- ==========================================================
 -- 2. TB_ATHLETE (Perfis vinculados aos usuários)
 -- ==========================================================
-INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations) VALUES (4, '71999999999', 'ACTIVE', 'Nenhuma restrição, foco em 5km');
-INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations) VALUES (5, '71988888888', 'ACTIVE', 'Dores leves no joelho esquerdo');
-INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations) VALUES (6, '71977777777', 'ACTIVE', 'Atleta de elite, preparando para maratona');
-INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations) VALUES (7, '71966666666', 'INACTIVE', 'Solicitou pausa para focar nos estudos');
-INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations) VALUES (8, '71955555555', 'ACTIVE', 'Hipertenso controlado, evitar tiros curtos');
-INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations) VALUES (9, '71944444444', 'INACTIVE', 'Inativação por falta de pagamento');
-
+-- ==========================================================
+-- 2. TB_ATHLETE (Perfis vinculados aos usuários com a nova coluna GOAL)
+-- ==========================================================
+INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, goal) VALUES (4, '71999999999', 'ACTIVE', 'Nenhuma restrição', 'Melhorar tempo nos 5km');
+INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, goal) VALUES (5, '71988888888', 'ACTIVE', 'Dores leves no joelho esquerdo', 'Completar primeira prova de 10km');
+INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, goal) VALUES (6, '71977777777', 'ACTIVE', 'Atleta de elite', 'Sub 3h na Maratona');
+INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, goal) VALUES (7, '71966666666', 'INACTIVE', 'Solicitou pausa para estudos', 'Manutenção de saúde');
+INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, goal) VALUES (8, '71955555555', 'ACTIVE', 'Hipertenso controlado', 'Perda de peso e 5km');
+INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, goal) VALUES (9, '71944444444', 'INACTIVE', 'Inativação por falta de pagamento', 'Retorno aos 10km');
 -- ==========================================================
 -- 3. TB_WEEKLY_TRAINING (Planilhas semanais)
 -- ==========================================================

@@ -3,7 +3,6 @@ package br.com.bravorun.club.entity;
 import br.com.bravorun.club.entity.enums.AthleteStatus;
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -20,6 +19,9 @@ public class Athlete {
 
     @Enumerated(EnumType.STRING)
     private AthleteStatus athleteStatus;
+
+    @Column(nullable = false)
+    private String goal;
 
     @Column(columnDefinition = "TEXT", nullable = true)
     private String medicalObservations;
@@ -38,10 +40,11 @@ public class Athlete {
     public Athlete() {
     }
 
-    public Athlete(Long id, String phone, AthleteStatus athleteStatus, String medicalObservations, User user) {
+    public Athlete(Long id, String phone, AthleteStatus athleteStatus, String goal, String medicalObservations, User user) {
         this.id = id;
         this.phone = phone;
         this.athleteStatus = athleteStatus;
+        this.goal = goal;
         this.medicalObservations = medicalObservations;
         this.user = user;
     }
@@ -68,6 +71,14 @@ public class Athlete {
 
     public void setStatus(AthleteStatus status) {
         this.athleteStatus = status;
+    }
+
+    public String getGoal() {
+        return goal;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
     }
 
     public String getMedicalObservations() {

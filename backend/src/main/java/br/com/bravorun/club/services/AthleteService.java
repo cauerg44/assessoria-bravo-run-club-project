@@ -1,0 +1,36 @@
+package br.com.bravorun.club.services;
+
+import br.com.bravorun.club.dto.response.AthleteMinResponseDTO;
+import br.com.bravorun.club.entity.Athlete;
+import br.com.bravorun.club.entity.enums.AthleteStatus;
+import br.com.bravorun.club.repository.AthleteRepository;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Service
+public class AthleteService {
+
+    private final AthleteRepository repository;
+
+    public AthleteService(AthleteRepository repository) {
+        this.repository = repository;
+    }
+
+    @Transactional(readOnly = true)
+    public List<AthleteMinResponseDTO> findAllMinByStatus(String status) {
+
+        String statusName = AthleteStatus.valueOf(status.toUpperCase()).name();
+
+        List<Athlete> list = repository.findAllMinByStatus(statusName);
+        return list.stream().map(athlete -> new AthleteMinResponseDTO(
+                athlete.getId(),
+                athlete.getUser().getName(),
+                athlete.getUser().getBirthDate(),
+                athlete.getGoal()
+        )).collect(Collectors.toList());
+    }
+}
