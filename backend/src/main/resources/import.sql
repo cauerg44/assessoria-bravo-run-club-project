@@ -26,10 +26,10 @@ INSERT INTO tb_athlete (user_id, phone, athlete_status, medical_observations, go
 -- ==========================================================
 -- 3. TB_WEEKLY_TRAINING (Planilhas semanais)
 -- ==========================================================
-INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, completed) VALUES (4, '2026-04-12', '2026-04-18', 'Volume', 'Segunda: 5km / Quarta: Tiros / Sexta: 7km / Domingo: 12km', true);
-INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, completed) VALUES (5, '2026-04-12', '2026-04-18', 'Recuperação', 'Segunda: Caminhada / Quarta: 3km leve / Sexta: Descanso', false);
-INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, completed) VALUES (6, '2026-04-12', '2026-04-18', 'Pico', 'Seg: 10km / Ter: 15km / Qua: Intervalado / Dom: 32km', false);
-INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, completed) VALUES (8, '2026-04-12', '2026-04-18', 'Manutenção', 'Terça: 40min trote / Quinta: 5km plano / Sábado: 40min trote', true);
+INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, training_type, completed) VALUES (4, '2026-04-12', '2026-04-18', 'Volume', 'Segunda: 5km / Quarta: Tiros / Sexta: 7km / Domingo: 12km', 'INTERVALS', true);
+INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, training_type, completed) VALUES (5, '2026-04-12', '2026-04-18', 'Recuperação', 'Segunda: Caminhada / Quarta: 3km leve / Sexta: Descanso', 'RECOVERY', false);
+INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, training_type, completed) VALUES (6, '2026-04-12', '2026-04-18', 'Pico', 'Seg: 10km / Ter: 15km / Qua: Intervalado / Dom: 32km', 'LONG_RUN', false);
+INSERT INTO tb_weekly_training (athlete_id, start_date, end_date, goal, description, training_type, completed) VALUES (8, '2026-04-12', '2026-04-18', 'Manutenção', 'Terça: 40min trote / Quinta: 5km plano / Sábado: 40min trote', 'EASY_RUN', true);
 
 -- ==========================================================
 -- 4. TB_PAYMENT (Histórico Financeiro)

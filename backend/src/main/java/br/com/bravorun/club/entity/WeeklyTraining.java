@@ -1,5 +1,6 @@
 package br.com.bravorun.club.entity;
 
+import br.com.bravorun.club.entity.enums.TrainingType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -23,6 +24,10 @@ public class WeeklyTraining {
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String description;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private TrainingType trainingType;
 
     @Column(nullable = false)
     private Boolean completed = false;
