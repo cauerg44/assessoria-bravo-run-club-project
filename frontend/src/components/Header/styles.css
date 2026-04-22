@@ -1,4 +1,4 @@
-header {
+.brc-header-client {
   background-color: var(--brc-bg-color-primary);
   height: 10vh;
   display: flex;
@@ -6,7 +6,7 @@ header {
   padding: 0 20px;
 }
 
-nav h1 {
+.brc-nav-header-client h1 {
   color: var(--brc-font-color-primary);
   text-align: center;
   text-transform: uppercase;
@@ -14,7 +14,7 @@ nav h1 {
 }
 
 @media (max-width: 576px) {
-  nav h1 {
+  .brc-nav-header-client h1 {
     font-size: 20px;
   }
 }
