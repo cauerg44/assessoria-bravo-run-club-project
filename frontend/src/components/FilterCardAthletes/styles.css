@@ -1,0 +1,29 @@
+.brc-filter-card-modal-container {
+  border-bottom: 1px solid var(--brc-border-color-secondary);
+  padding-bottom: 20px;
+}
+
+.brc-filter-card-modal-container h2 {
+  color: var(--brc-font-color-tertiary);
+  margin-bottom: 20px;
+}
+
+.brc-filter-card-modal-athletes {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 30px 50px;
+  background-color: var(--brc-bg-color-primary);
+  color: var(--brc-font-color-primary);
+  border: 1px solid var(--brc-border-color-secondary);
+  border-radius: 8px;
+}
+
+.menu-item {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.menu-active {
+  font-weight: 700;
+}

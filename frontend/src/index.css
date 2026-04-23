@@ -4,6 +4,8 @@
   --brc-bg-color-primary: #013e74;
   --brc-bg-color-secondary: #e8e8e8;
   --brc-bg-color-tertiary: #d9d9d9;
+  --brc-bg-color-quintanary: #0057a3;
+  --brc-bg-color-senary: #cacaca;
 
   --brc-font-color-primary: #fff;
   --brc-font-color-secondary: #013e74;
@@ -14,6 +16,7 @@
 
   --brc-border-color-primary: #013e74;
   --brc-border-color-secondary: #0057a3;
+  --brc-border-color-tertiary: #636363;
 }
 
 * {
