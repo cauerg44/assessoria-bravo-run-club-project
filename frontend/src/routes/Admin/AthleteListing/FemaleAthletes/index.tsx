@@ -2,7 +2,7 @@ import './styles.css';
 import AthleteMinCard from "../../../../components/AthleteMinCard";
 import { useEffect, useState } from 'react';
 import type { AthleteMinDTO } from '../../../../models/athlete-min-dto';
-import axios from 'axios';
+import * as athleteService from '../../../../services/athlete-service.ts';
 
 export default function FemaleAthletes() {
 
@@ -11,15 +11,14 @@ export default function FemaleAthletes() {
   const [athletesQuantity, setAthletesQuantity] = useState<number>();
 
   useEffect(() => {
-    axios.get("http://localhost:8080/v1/athletes?status=active&gender=f")
+    athleteService.findAllMinByStatusAndGender("active", "f")
       .then(
         response => {
-          console.log(response.data);
           setAthletes(response.data);
           setAthletesQuantity(response.data.length);
         }
       );
-  }, []);
+  }, [athletes]);
 
   return (
     <section id="brc-female-athletes-section" className="brc-container-1100">
