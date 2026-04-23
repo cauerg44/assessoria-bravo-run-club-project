@@ -19,8 +19,8 @@ public class AthleteController {
     }
 
     @GetMapping
-    public ResponseEntity<List<AthleteMinResponseDTO>> findAllAthletesMinByStatus(@RequestParam String status) {
-        var athletes = service.findAllMinByStatus(status);
+    public ResponseEntity<List<AthleteMinResponseDTO>> findAllAthletesMinByStatusAndGender(@RequestParam String status, @RequestParam String gender) {
+        var athletes = service.findAllMinByStatusAndGender(status, gender);
         return ResponseEntity.ok().body(athletes);
     }
 

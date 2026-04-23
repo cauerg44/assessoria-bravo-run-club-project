@@ -13,9 +13,9 @@ public interface AthleteRepository extends JpaRepository<Athlete, Long> {
             """
             SELECT a.* FROM tb_athlete a 
             INNER JOIN tb_user u ON a.user_id = u.id 
-            WHERE a.athlete_status = :status
+            WHERE a.athlete_status = :status AND u.gender = :gender
             """)
-    List<Athlete> findAllMinByStatus(String status);
+    List<Athlete> findAllMinByStatusAndGender(String status, String gender);
 
     @Query(nativeQuery = true, value =
             """
