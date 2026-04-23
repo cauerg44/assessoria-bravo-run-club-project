@@ -1,18 +1,23 @@
+import type { AthleteMinDTO } from '../../models/athlete-min-dto';
 import './styles.css';
 
-export default function AthleteMinCard() {
+type Props = {
+  athleteMinDTO: AthleteMinDTO;
+}
+
+export default function AthleteMinCard({ athleteMinDTO }: Props) {
   return (
     <>
       <div className="brc-athlete-min-card">
         <div className="brc-athlete-min-card-name">
-          <p>Cauê Garcia</p>
+          <p>{athleteMinDTO.name}</p>
         </div>
         <div className="brc-athlete-min-card-birth-date">
-          <p>08/11/2004</p>
+          <p>{athleteMinDTO.birthDate}</p>
         </div>
         <div className="brc-athlete-min-card-athlete-goal">
           <h3>Objetivo</h3>
-          <p>Correr 5km abaixo de 20 minutos</p>
+          <p>{athleteMinDTO.goal}</p>
         </div>
       </div>
     </>
