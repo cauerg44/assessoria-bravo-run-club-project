@@ -1,5 +1,6 @@
 package br.com.bravorun.club.dto.response;
 
+import br.com.bravorun.club.entity.Athlete;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
@@ -13,4 +14,14 @@ public record AthleteResponseDTO(
         String phone,
         String medicalObservations
 ) {
+        public AthleteResponseDTO(Athlete athlete) {
+                this(
+                        athlete.getId(),
+                        athlete.getUser().getName(),
+                        athlete.getUser().getBirthDate(),
+                        athlete.getGoal(),
+                        athlete.getPhone(),
+                        athlete.getMedicalObservations()
+                );
+        }
 }

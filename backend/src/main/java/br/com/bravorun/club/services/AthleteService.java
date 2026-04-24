@@ -30,12 +30,7 @@ public class AthleteService {
         String genderEnum = Gender.valueOf(gender.toUpperCase()).name();
 
         List<Athlete> list = repository.findAllMinByStatusAndGender(statusName, genderEnum);
-        return list.stream().map(athlete -> new AthleteMinResponseDTO(
-                athlete.getId(),
-                athlete.getUser().getName(),
-                athlete.getUser().getBirthDate(),
-                athlete.getGoal()
-        )).collect(Collectors.toList());
+        return list.stream().map(athlete -> new AthleteMinResponseDTO(athlete)).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
@@ -43,13 +38,6 @@ public class AthleteService {
         Athlete athlete = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Recurso não encontrado"));
 
-        return new AthleteResponseDTO(
-                athlete.getId(),
-                athlete.getUser().getName(),
-                athlete.getUser().getBirthDate(),
-                athlete.getGoal(),
-                athlete.getPhone(),
-                athlete.getMedicalObservations()
-        );
+        return new AthleteResponseDTO(athlete);
     }
 }
